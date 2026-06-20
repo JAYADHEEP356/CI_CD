@@ -6,10 +6,10 @@ include:
 
 targets:
   dev:
-    default: true
     workspace:
       host: https://adb-7405615323334349.9.azuredatabricks.net/
 
   prod:
+    default: true
     workspace:
       host: https://adb-7405616406016449.9.azuredatabricks.net/
