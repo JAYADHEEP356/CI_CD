@@ -12,4 +12,4 @@ targets:
   prod:
     default: true
     workspace:
-      host: https://adb-7405616406016449.9.azuredatabricks.net/
+      host: https://adb-7405607422109825.5.azuredatabricks.net/
