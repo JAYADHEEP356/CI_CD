@@ -1,0 +1,26 @@
+resources:
+  jobs:
+    Customer_medallion_pipeline:
+      name: Customer_medallion_pipeline
+      tasks:
+        - task_key: Bronze
+          notebook_task:
+            notebook_path: /Repos/125136050@sastra.ac.in/CI_CD/bronze _customer
+            source: WORKSPACE
+          existing_cluster_id: 0604-104013-otpbyn57
+        - task_key: Silver
+          depends_on:
+            - task_key: Bronze
+          notebook_task:
+            notebook_path: /Repos/125136050@sastra.ac.in/CI_CD/Silver_customer
+            source: WORKSPACE
+          existing_cluster_id: 0604-104013-otpbyn57
+        - task_key: Gold
+          depends_on:
+            - task_key: Silver
+          notebook_task:
+            notebook_path: /Repos/125136050@sastra.ac.in/CI_CD/Gold_customer
+            source: WORKSPACE
+          existing_cluster_id: 0604-104013-otpbyn57
+      queue:
+        enabled: true
