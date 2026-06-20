@@ -8,8 +8,8 @@ targets:
   dev:
     default: true
     workspace:
-      host: https://<dev-workspace-url>
+      host: https://adb-7405615323334349.9.azuredatabricks.net/
 
   prod:
     workspace:
-      host: https://<prod-workspace-url>
+      host: https://adb-7405616406016449.9.azuredatabricks.net/
